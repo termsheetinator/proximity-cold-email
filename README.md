@@ -1,8 +1,8 @@
 <div align="center">
 
-# Proximity Cold Email
+<img src="assets/proximity-banner.jpeg" alt="Proximity Method — Write Cold Emails That Get Replies and Book Meetings" width="100%"/>
 
-### Write cold email copy that feels close to the result — and stays out of spam.
+<br/><br/>
 
 [![License](https://img.shields.io/badge/license-Proprietary-black?style=flat-square)](./LICENSE)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-skill-orange?style=flat-square)](https://claude.ai/code)
@@ -26,6 +26,12 @@ Most cold email fails before the prospect finishes the first line. Not because t
 **`/proximity`** writes and audits body copy, subject lines, and CTAs using the Proximity Method framework. It onboards from your website on first run — no interview, no setup. Every session after, it just asks who the list is for.
 
 **`/spamguard`** scans any copy against 178+ banned trigger words, 7 phrase categories, and a complete formatting ruleset. Works on emails, subject lines, follow-ups, opener lines, or any copy field. Every violation flagged with a specific fix and a clean rewrite.
+
+---
+
+<div align="center">
+<img src="assets/proximity-replies.jpeg" alt="Proximity Method Results — 0.2% to 4.3% reply rate, 7% to 43% positive reply rate" width="100%"/>
+</div>
 
 ---
 
