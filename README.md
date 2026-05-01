@@ -213,7 +213,7 @@ Every run after: it asks who the list is for. That is it.
 
 **Brought to you by**
 
-[**InfraSuite**](https://infrasuite.io) — Enterprise Microsoft mailboxes for cold email operators
+[**InfraSuite**](https://infrasuite.io) — Enterprise Grade Cold-Email Mailboxes
 
 **×**
 
