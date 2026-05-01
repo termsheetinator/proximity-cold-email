@@ -182,6 +182,14 @@ CTAs · opener lines · LinkedIn DMs · any copy field
 curl -fsSL https://raw.githubusercontent.com/termsheetinator/proximity-cold-email/main/install.sh | bash
 ```
 
+## Update
+
+Already installed? Re-run the same command. It overwrites both skills and the word list with the latest version. Your `memory.md` is not touched — positioning stays intact.
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/termsheetinator/proximity-cold-email/main/install.sh | bash
+```
+
 Installs both skills to `~/.claude/skills/`. Creates `memory.md` and `spamwords.md` in your current directory.
 
 Open [Claude Code](https://claude.ai/code) in that directory and run:
