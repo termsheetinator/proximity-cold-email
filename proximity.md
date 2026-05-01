@@ -322,40 +322,17 @@ Clarity beats curiosity. Curiosity beats clever.
 
 ---
 
-## Spam Guard
+## Spam Filter
 
-Run this on every output before delivering it. This is not optional — no copy leaves without passing this check.
+Before delivering any copy — subject lines, body, CTA, or any rewrite — scan every word you wrote against this list. If anything hits, rewrite that line before it goes out. This runs silently on your own output. It is not a user-facing process.
 
-**Banned single words:** get, bank, credit, access, open, compare, problem, now, billing, deal, finance, financial, claims, claim, insurance, mortgage, soon, new, performance, freedom, home, sales, medical, urgent, life, marketing, investment, diagnostics, friend, cash, invoice, extra, purchase, vacation, trial, offshore, luxury, affordable, debt, bonus, removal, traffic, gold, cost, costs, sale, legal, order, hard, soft, earnest, modular, manufactured, income, rebate, warranty, stop, sample, bulk, container, roll, human, fx, rental, success, student, fast, equity, product, beverage, solution, medicine, check, profit, profits, form, junk, off, obligation, member, buy, guarantee, loan, loans, all, chance, call, million, money, foreclosure, casino, discount, diagnostic, phone, medium, timeshare, supplies, bankruptcy, name, rate, rates, terms, cheap, opportunity, prize, action, certified, accounts, refund, celebrity, covid, gift, clearance, card, quote, sex, only, vip, free, today, score, refinance, billion, winner, winning, selected, congratulations, cancel, bargain, promise, spam, subscribe, subscription, payment, password, deposit, transaction, transfer, reward, redeem, coupon, promo, promotion, hidden, warning, download, verify, breach, weight, pennies, wholesale, consolidate, pre-approved, retainer, upfront, charges, earn, earnings, salary, wage, payout, compensation, commission, yield, returns, interest, principal, collateral, leverage, capital, fund, funded, funding, raise, raising, raised, pitch, pitched, close, closed, closing, structured, structure, arrange, arranged, arrangement, place, placed, placement, originate, originated, origination, underwrite, underwritten, underwriting, syndicate, syndicated, syndication
+**Banned words:** get, bank, credit, access, open, compare, problem, now, billing, deal, finance, financial, claims, claim, insurance, mortgage, soon, new, performance, freedom, home, sales, medical, urgent, life, marketing, investment, diagnostics, friend, cash, invoice, extra, purchase, vacation, trial, offshore, luxury, affordable, debt, bonus, removal, traffic, gold, cost, costs, sale, legal, order, hard, soft, earnest, modular, manufactured, income, rebate, warranty, stop, sample, bulk, container, roll, human, fx, rental, success, student, fast, equity, product, beverage, solution, medicine, check, profit, profits, form, junk, off, obligation, member, buy, guarantee, loan, loans, all, chance, call, million, money, foreclosure, casino, discount, diagnostic, phone, medium, timeshare, supplies, bankruptcy, name, rate, rates, terms, cheap, opportunity, prize, action, certified, accounts, refund, celebrity, covid, gift, clearance, card, quote, sex, only, vip, free, today, score, refinance, billion, winner, winning, selected, congratulations, cancel, bargain, promise, spam, subscribe, subscription, payment, password, deposit, transaction, transfer, reward, redeem, coupon, promo, promotion, hidden, warning, download, verify, breach, weight, pennies, wholesale, consolidate, pre-approved, retainer, upfront, charges, earn, earnings, salary, wage, payout, compensation, commission, yield, returns, interest, principal, collateral, leverage, capital, fund, funded, funding, raise, raising, raised, pitch, pitched, close, closed, closing, structured, structure, arrange, arranged, arrangement, place, placed, placement, originate, originated, origination, underwrite, underwritten, underwriting, syndicate, syndicated, syndication
 
-**Compound and hyphenated forms — also flagged:**
-- lower-cost (contains `cost`), low-cost, cost-free, no-cost, cost-effective
-- interest-free (contains `interest`), money-back, cash-out, debt-free
-- risk-free, pre-approved, best-priced, easy-terms, high-yield, high-return
+**Also flag compound and hyphenated forms:** lower-cost, low-cost, cost-free, no-cost, cost-effective, interest-free, money-back, cash-out, debt-free, risk-free, pre-approved, best-priced, high-yield, high-return
 
-**Banned phrases:** off chance, one time, all good, following up here, last note from me here, great fit, bumping this once, just following up once, circle back, one more quick follow-up, keep this open, compare notes, compare notes live, appreciate the reply, bumping this up, looping back, just checking in, wanted to follow up, hope this finds you well, touching base, reaching out again, per my last email, as I mentioned, did you see my last email, following up on my previous, wanted to reconnect
+**Banned phrases:** off chance, one time, all good, following up here, last note from me here, great fit, bumping this once, just following up once, circle back, one more quick follow-up, keep this open, compare notes, compare notes live, appreciate the reply, bumping this up, looping back, just checking in, wanted to follow up, hope this finds you well, touching base, reaching out again
 
-**Formatting violations:**
-- ALL CAPS anywhere in subject or body
-- More than one exclamation mark
-- Em dashes (—) — replace with hyphens (-)
-- More than one link
-- Promotional formatting — excessive bolding, bullet lists that look like a sales page
-
-**Audit loop — mandatory before delivery:**
-
-After writing the rewrite, re-scan every word against the banned list above. If any violations remain, rewrite those lines and scan again. Keep going until a full scan returns zero violations. Only then deliver the output. Note how many passes it took.
-
-**How to rewrite flagged lines:**
-
-Do not swap the banned word for a synonym. Rewrite the whole line.
-
-1. Identify what the line is actually trying to say — ignore the words, focus on the idea
-2. Write that idea in plain English a ten-year-old could understand
-3. Check every word in the rewrite against the banned list before committing
-4. If anything hits — go back to step 2
-
-Never replace a banned word with another banned word (`money` → `lower-cost capital` still contains `cost`). Never add qualifiers to a banned word to soften it — the root token is still banned.
+**If a word hits:** rewrite the line from the plain idea underneath it. Do not swap the banned word for a synonym — rewrite the whole line in plain English. Check every word in the rewrite before committing. If anything hits again, rewrite again.
 
 ---
 
