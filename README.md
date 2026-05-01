@@ -1,10 +1,10 @@
 # Proximity Cold Email
 
-A Claude Code skill that audits and rewrites cold email copy using the Proximity Method.
+Two Claude Code skills for cold email copy — write it right and keep it out of spam.
 
-Two phases, every run: **proximity analysis** (is the message close enough to the result the prospect wants?) and **spam guard** (does it pass deliverability?).
+**`/proximity`** — audits and rewrites copy using the Proximity Method. Scores your email on a spectrum from setup language (far) to active framing (close). Rewrites from the position that feels closest to what the prospect wants. Builds a persistent positioning doc from your offer on first run so it always knows your context.
 
-On first run it walks you through your offer, extracts your positioning, and saves a `memory.md` file so every future run already knows your context.
+**`/spamguard`** — scans any copy against 178+ banned single words, 7 phrase categories, and a full formatting ruleset. Works on emails, subject lines, follow-ups, LinkedIn DMs, opener lines, or any custom variable. Flags every violation with a specific plain-language fix and rewrites the whole thing clean.
 
 Built by [Termsheetinator](https://github.com/termsheetinator).
 
@@ -22,7 +22,13 @@ Then open Claude Code in your project directory and run:
 /proximity
 ```
 
-That is it. First run onboards you. Every run after goes straight to audit or write mode.
+or
+
+```
+/spamguard
+```
+
+First run of `/proximity` onboards you and builds your positioning doc. Every run after goes straight to audit or write mode. `/spamguard` is ready to use immediately — just paste copy.
 
 ---
 
@@ -145,9 +151,10 @@ The skill understands these offer types natively and adjusts proximity framing p
 
 | File | Purpose |
 |---|---|
-| `proximity.md` | The Claude Code skill — installed to `~/.claude/skills/` |
+| `proximity.md` | Proximity Method auditor and rewriter — installed to `~/.claude/skills/` |
+| `spamguard.md` | Full spam trigger scanner — installed to `~/.claude/skills/` |
 | `memory.md` | Your positioning doc — generated on first run, lives in your working directory |
-| `install.sh` | One-command installer |
+| `install.sh` | One-command installer (drops both skills) |
 
 ---
 

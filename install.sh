@@ -3,29 +3,30 @@ set -e
 
 SKILL_DIR="$HOME/.claude/skills"
 MEMORY_DIR="$(pwd)"
-SKILL_URL="https://raw.githubusercontent.com/termsheetinator/proximity-cold-email/main/proximity.md"
-MEMORY_URL="https://raw.githubusercontent.com/termsheetinator/proximity-cold-email/main/memory.md"
+BASE_URL="https://raw.githubusercontent.com/termsheetinator/proximity-cold-email/main"
 
 echo ""
-echo "Installing Proximity Cold Email skill..."
+echo "Installing Proximity Cold Email skills..."
 echo ""
 
-# Create skills directory if it does not exist
 mkdir -p "$SKILL_DIR"
 
-# Download the skill
-curl -fsSL "$SKILL_URL" -o "$SKILL_DIR/proximity.md"
+curl -fsSL "$BASE_URL/proximity.md" -o "$SKILL_DIR/proximity.md"
+echo "  ✓ /proximity installed"
 
-# Download memory.md to current directory if it does not already exist
+curl -fsSL "$BASE_URL/spamguard.md" -o "$SKILL_DIR/spamguard.md"
+echo "  ✓ /spamguard installed"
+
 if [ ! -f "$MEMORY_DIR/memory.md" ]; then
-  curl -fsSL "$MEMORY_URL" -o "$MEMORY_DIR/memory.md"
+  curl -fsSL "$BASE_URL/memory.md" -o "$MEMORY_DIR/memory.md"
+  echo "  ✓ memory.md created in current directory"
 fi
 
-echo "Done."
 echo ""
-echo "  Skill installed to: $SKILL_DIR/proximity.md"
-echo "  Memory file ready:  $MEMORY_DIR/memory.md"
+echo "Done. Open Claude Code in this directory and run:"
 echo ""
-echo "  Open Claude Code in this directory and run /proximity to get started."
-echo "  On first run, the skill will walk you through your offer and build your positioning doc."
+echo "  /proximity  — audit or write cold email copy using the Proximity Method"
+echo "  /spamguard  — scan any copy for spam triggers and get a clean rewrite"
+echo ""
+echo "Run /proximity first — it will walk you through your offer and build your positioning doc."
 echo ""
