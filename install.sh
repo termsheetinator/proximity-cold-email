@@ -86,6 +86,11 @@ if [ ! -f "$MEMORY_DIR/memory.md" ]; then
   sleep 0.2
 fi
 
+# spamwords.md
+(curl -fsSL "$BASE_URL/spamwords.md" -o "$MEMORY_DIR/spamwords.md" 2>/dev/null) &
+spinner $! "spamwords.md  — Master spam word reference installed"
+sleep 0.2
+
 printf "\n"
 printf "  ${DIM}────────────────────────────────────────────────────${RESET}\n"
 printf "\n"

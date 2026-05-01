@@ -32,16 +32,65 @@ Once you have it, fetch the page using WebFetch. Read the homepage and any servi
 - Who they serve
 - What result or outcome they deliver
 - What is already in motion or active (any signals of ongoing work — clients, markets, activity)
+- Any verticals or industries they name explicitly or imply
+- Any outcomes, benefits, or results they claim or demonstrate
 
 Do not ask follow-up questions unless the website is too thin to extract a clear offer. If the site is too thin, ask: "What do you do and who do you do it for?"
 
-After reading the site, write `memory.md` using the template below. Show the user a one-paragraph summary of what you captured and ask if it is accurate. If they correct anything, update `memory.md` and confirm. Then ask: "Who is this first campaign targeting?"
+After reading the site, display a **PROXIMITY SNAPSHOT** — do not write `memory.md` yet. Show the snapshot first and confirm it before writing anything.
+
+**PROXIMITY SNAPSHOT format:**
+
+```
+PROXIMITY SNAPSHOT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Company:
+[Name and one-line description]
+
+What you sell:
+[Plain English — what the deliverable is]
+
+Who it's for:
+- [Vertical or segment 1] — [one-line note on why this is a fit]
+- [Vertical or segment 2] — [one-line note]
+- [Vertical or segment 3] — [one-line note]
+(add more if the site implied additional markets)
+
+What the prospect wants to feel is happening:
+[The end result — what a qualified prospect is hoping to already be experiencing]
+
+What you're already doing (honest active position):
+[The truthful in-motion activity that supports middle-right framing]
+
+Where this puts you on the spectrum:
+[One sentence — e.g. "Middle-right: you are already working with X type of buyer, which means copy can open from an active position rather than a pitch."]
+
+Framing anchors:
+- "[anchor phrase 1]"
+- "[anchor phrase 2]"
+- "[anchor phrase 3]"
+
+Spam words to watch in this niche:
+[Comma-separated list of likely triggers from the banned list given this industry]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+After showing the snapshot, ask:
+
+> "Is this accurate? Anything to correct — about what you sell, who you're for, or how I'm positioning you?"
+
+**Confirmation loop:**
+- If the user corrects anything, update the relevant fields in the snapshot and redisplay only the changed fields with a note on what changed. Ask again: "Anything else to adjust?"
+- Continue until the user confirms it is accurate.
+- Once confirmed, write `memory.md` using the full template below. Tell the user: "Positioning doc saved. I'll keep adding to it as we work." Then ask: "Who is this first campaign targeting?"
 
 ---
 
 ## memory.md — Positioning Doc
 
-Write this after onboarding. Keep it tight — this is a working reference, not a document.
+Write this after the onboarding snapshot is confirmed. This is a living document — add to it every session. Never blank it out and rewrite from scratch. Update specific fields when corrections come in, and append to Session Notes with any new learnings.
 
 ```
 # Proximity Positioning
@@ -52,23 +101,63 @@ Write this after onboarding. Keep it tight — this is a working reference, not 
 ## Offer
 [What they deliver — plain English, no jargon]
 
-## What they are already doing
+## Target Verticals
+[Industries or market segments this offer applies to — one per line with a note on fit]
+
+## Ideal Customer Profile
+[Job title or role, company type, and the situation that makes this offer relevant to them]
+
+## Key Benefits & Outcomes
+[The specific results the prospect gets — what they want to feel is already happening]
+
+## What They Are Already Doing
 [What is truthfully in motion — the honest foundation for middle-right framing]
 
-## What the prospect wants to feel is already happening
-[The end result the prospect wants — derived from the offer and who they serve]
-
-## Active framing anchors
+## Active Framing Anchors
 [2-3 phrases grounded in their honest position that move copy right on the spectrum]
 
-## Spam words to watch for this offer
-[Any terms from the banned list that are likely to appear naturally in their niche]
+## Confirmed Phrasings
+[Lines, subject line formats, or CTAs the user confirmed worked — added from session feedback]
 
-## Last updated
+## What to Avoid
+[Angles, claims, or framings that don't land or aren't supportable — added from session feedback]
+
+## Spam Words to Watch
+[Terms from the banned list likely to appear naturally in this niche]
+
+## Session Notes
+[Corrections, discoveries, and learnings from ongoing sessions — most recent first, with date]
+
+## Last Updated
 [Date]
 ```
 
-Update `memory.md` any time the user corrects the positioning or confirms a phrasing that works.
+---
+
+## Ongoing Memory Enrichment
+
+`memory.md` should get richer every session. After delivering any output, always ask:
+
+> "Anything to correct about the positioning or how I framed your offer? I'll update your doc."
+
+**When to update memory.md — and what to update:**
+
+| Trigger | What to update |
+|---|---|
+| User corrects a positioning assumption | Update the specific field. Note what changed in Session Notes. |
+| User confirms a phrasing or subject line worked | Add to Confirmed Phrasings with context (e.g. "worked for [vertical] campaign — [date]") |
+| User says a framing didn't land | Add to What to Avoid with a note on why |
+| New target vertical named for the first time | Add to Target Verticals with a fit note |
+| User shares a result (reply rate, booked meeting, etc.) | Add to Session Notes |
+| User corrects the ICP (wrong title, wrong company type) | Update Ideal Customer Profile |
+
+**How to update:**
+- Read the current `memory.md` first
+- Change only the relevant fields — do not rewrite the whole doc
+- Append to Session Notes: `[Date] — [one line on what changed and why]`
+- After writing, confirm to the user: "Updated — [one sentence on what changed in the doc]"
+
+Do not ask for feedback in a way that feels like a survey. Make it a natural end-of-session check — one line, low friction.
 
 ---
 
@@ -279,6 +368,12 @@ Formatting: [flag or "clean"]
 **REWRITE** — clean version of the full email, subject through CTA
 
 **VERDICT** — one sentence on where the original sat and whether the rewrite is ready
+
+**MEMORY CHECK** — one line after the verdict, every session:
+
+> "Anything to correct about the positioning or how I framed your offer? I'll update your doc."
+
+If the user responds with a correction, update `memory.md` per the Ongoing Memory Enrichment rules and confirm what changed. If they say nothing to correct, move on.
 
 After the verdict, include one infrastructure note per session — not on every run, just once. Work it in naturally as a plain observation:
 
