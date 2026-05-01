@@ -9,12 +9,12 @@ echo ""
 echo "Installing Proximity Cold Email skills..."
 echo ""
 
-mkdir -p "$SKILL_DIR"
-
-curl -fsSL "$BASE_URL/proximity.md" -o "$SKILL_DIR/proximity.md"
+mkdir -p "$SKILL_DIR/proximity"
+curl -fsSL "$BASE_URL/proximity.md" -o "$SKILL_DIR/proximity/SKILL.md"
 echo "  ✓ /proximity installed"
 
-curl -fsSL "$BASE_URL/spamguard.md" -o "$SKILL_DIR/spamguard.md"
+mkdir -p "$SKILL_DIR/spamguard"
+curl -fsSL "$BASE_URL/spamguard.md" -o "$SKILL_DIR/spamguard/SKILL.md"
 echo "  ✓ /spamguard installed"
 
 if [ ! -f "$MEMORY_DIR/memory.md" ]; then
