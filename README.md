@@ -217,7 +217,7 @@ Every run after: it asks who the list is for. That is it.
 
 **×**
 
-**Advisory Incubator™** — AI-enabled advisory for commercial finance and revenue teams
+**Advisory Incubator™** — AI & Tech Enabled Advisory
 
 <br/>
 
