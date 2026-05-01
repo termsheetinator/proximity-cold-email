@@ -1,21 +1,22 @@
-MIT License
+Proprietary License
 
-Copyright (c) 2026 Termsheetinator
+Copyright (c) 2026 Termsheetinator. All rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This software and all associated files (the "Software") are the exclusive property
+of Termsheetinator. The following terms govern all access and use.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+PERMITTED:
+- You may install and use this Software for personal or internal business purposes.
+- You may read and study the source for educational purposes.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+NOT PERMITTED without prior written permission from Termsheetinator:
+- Redistribute, resell, sublicense, or commercially exploit this Software
+- Fork, copy, or incorporate this Software into other products or services
+- Remove or alter any copyright notices or ownership attribution
+- Claim authorship or ownership of this Software or any derivative works
+- Use this Software to build competing products or services
+
+THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
+TERMSHEETINATOR SHALL NOT BE LIABLE FOR ANY DAMAGES ARISING FROM USE OF THIS SOFTWARE.
+
+For licensing inquiries: github.com/termsheetinator
