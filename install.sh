@@ -91,6 +91,31 @@ fi
 spinner $! "spamwords.md  — Master spam word reference installed"
 sleep 0.2
 
+# hooks — wire up positioning doc persistence
+mkdir -p "$MEMORY_DIR/.claude/hooks"
+(curl -fsSL "$BASE_URL/.claude/hooks/proximity-active.sh" -o "$MEMORY_DIR/.claude/hooks/proximity-active.sh" 2>/dev/null) &
+spinner $! ".claude/hooks  — positioning doc hook wired"
+sleep 0.2
+chmod +x "$MEMORY_DIR/.claude/hooks/proximity-active.sh" 2>/dev/null || true
+
+cat > "$MEMORY_DIR/.claude/settings.json" <<'SETTINGS'
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/proximity-active.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
+SETTINGS
+
 printf "\n"
 printf "  ${DIM}────────────────────────────────────────────────────${RESET}\n"
 printf "\n"
