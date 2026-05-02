@@ -73,12 +73,6 @@ mkdir -p "$SKILL_DIR/proximity"
 spinner $! "/proximity  — Proximity Method writer + auditor"
 sleep 0.2
 
-# Install spamguard
-mkdir -p "$SKILL_DIR/spamguard"
-(curl -fsSL "$BASE_URL/spamguard.md" -o "$SKILL_DIR/spamguard/SKILL.md" 2>/dev/null) &
-spinner $! "/spamguard  — Spam trigger scanner"
-sleep 0.2
-
 # memory.md
 if [ ! -f "$MEMORY_DIR/memory.md" ]; then
   (curl -fsSL "$BASE_URL/memory.md" -o "$MEMORY_DIR/memory.md" 2>/dev/null) &
@@ -125,9 +119,7 @@ type_out "  All done. Open Claude Code in this directory." 0.02
 printf "\n"
 sleep 0.2
 
-printf "  ${BRIGHT_GREEN}/proximity${RESET}   ${DIM}→  write and audit copy using the Proximity Method${RESET}\n"
-sleep 0.15
-printf "  ${BRIGHT_GREEN}/spamguard${RESET}   ${DIM}→  scan any copy for spam triggers${RESET}\n"
+printf "  ${BRIGHT_GREEN}/proximity${RESET}   ${DIM}→  write and audit copy — spam check runs silently inside${RESET}\n"
 sleep 0.3
 
 printf "\n"
