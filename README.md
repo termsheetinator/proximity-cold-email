@@ -6,7 +6,7 @@
 
 [![License](https://img.shields.io/badge/license-Proprietary-black?style=flat-square)](./LICENSE)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-skill-orange?style=flat-square)](https://claude.ai/code)
-[![Skills](https://img.shields.io/badge/skills-2-blue?style=flat-square)](#skills)
+[![Skills](https://img.shields.io/badge/skills-1-blue?style=flat-square)](#skills)
 [![Built by Termsheetinator](https://img.shields.io/badge/by-Termsheetinator-303030?style=flat-square)](https://github.com/termsheetinator)
 
 <br/>
@@ -19,13 +19,13 @@
 
 ## What This Is
 
-Two Claude Code skills for cold email copy — built on the Proximity Method.
+One Claude Code skill for cold email copy — built on the Proximity Method with spam checking built in.
 
 Most cold email fails before the prospect finishes the first line. Not because the offer is wrong. Because the message feels too far from the result they want. That distance is what the Proximity Method fixes.
 
 **`/proximity`** writes and audits body copy, subject lines, and CTAs using the Proximity Method framework. It onboards from your website on first run — no interview, no setup. Shows you exactly how it's positioning your offer, confirms it with you, and builds a positioning doc that gets richer every session through a live feedback loop.
 
-**`/spamguard`** scans any copy against 300+ banned trigger words and phrases, 7 phrase categories, and a complete formatting ruleset. Every violation is flagged with a specific fix and a plain-English rewrite. The clean version then runs through an internal audit loop — re-scanned against the full list — and keeps rewriting until it passes with zero violations before it reaches you.
+Every piece of copy runs through a silent internal spam audit — 350+ banned words, 7 phrase categories, a formatting ruleset, and a unified audit loop — before it reaches you. You never see a scan output. You just get clean copy.
 
 ---
 
@@ -79,10 +79,9 @@ flowchart TD
     K -- Yes --> L[Paste your draft]
     K -- No --> N[AI writes from scratch]
 
-    L --> O[Proximity audit]
+    L --> O[Proximity audit + silent spam scan]
     N --> O
-    O --> P[Spam guard pass]
-    P --> Q([Clean copy — ready to send])
+    O --> Q([Clean copy — ready to send])
     Q --> R{Anything to correct\nabout positioning?}
     R -- Yes --> S[User gives feedback]
     S --> T[Updates memory.md]
@@ -95,7 +94,6 @@ flowchart TD
     style I fill:#2d6a4f,color:#fff,stroke:#2d6a4f
     style T fill:#2d6a4f,color:#fff,stroke:#2d6a4f
     style O fill:#1d3557,color:#fff,stroke:#1d3557
-    style P fill:#1d3557,color:#fff,stroke:#1d3557
     style F fill:#457b9d,color:#fff,stroke:#457b9d
 ```
 
@@ -142,13 +140,15 @@ RULES
 
 ---
 
-## SpamGuard Coverage
+## Spam Coverage — Built Into /proximity
+
+Every piece of copy runs through a full internal audit before it reaches you. You never see the scan. Violations are rewritten silently.
 
 ```
-WHAT /spamguard SCANS
+WHAT RUNS ON EVERY OUTPUT
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-  300+  banned single words
+  350+  banned single words
     7   high-risk phrase categories
          → Money & financial hype
          → Scammy / too-good-to-be-true
@@ -157,21 +157,21 @@ WHAT /spamguard SCANS
          → Health & pharma terms
          → Tech phishing-like phrases
          → Gambling, adult & blacklisted
-   26   banned follow-up phrases
+   14   banned follow-up phrases
     5   formatting checks
          → ALL CAPS
          → Em dashes
          → Multiple exclamation marks
          → Excessive links
          → Promotional formatting
-    1   internal audit loop
-         → Clean version re-scanned before delivery
-         → Rewrites until zero violations — then stops
+    1   unified audit loop
+         → Spam and clarity run together every pass
+         → Rewrites until zero violations — then delivers
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Works on: emails · subject lines · follow-ups ·
-CTAs · opener lines · LinkedIn DMs · any copy field
+CTAs · opener lines · spintax variants · any copy field
 ```
 
 ---
@@ -184,13 +184,13 @@ curl -fsSL https://raw.githubusercontent.com/termsheetinator/proximity-cold-emai
 
 ## Update
 
-Already installed? Re-run the same command. It overwrites both skills and the word list with the latest version. Your `memory.md` is not touched — positioning stays intact.
+Already installed? Re-run the same command. It overwrites the skill and the word list with the latest version. Your `memory.md` is not touched — positioning stays intact.
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/termsheetinator/proximity-cold-email/main/install.sh | bash
 ```
 
-Installs both skills to `~/.claude/skills/`. Creates `memory.md` and `spamwords.md` in your current directory.
+Installs the skill to `~/.claude/skills/`. Creates `memory.md` and `spamwords.md` in your current directory.
 
 Open [Claude Code](https://claude.ai/code) in that directory and run:
 
@@ -200,7 +200,7 @@ Open [Claude Code](https://claude.ai/code) in that directory and run:
 
 First run: give it your website URL. It reads your site, shows you a full positioning snapshot, and asks you to confirm before writing anything. Every session after: it asks who the list is for and updates your positioning doc as it learns more.
 
-Run `/spamguard` to scan any copy. The clean version is audited internally before it reaches you — it will not stop until it passes with zero violations.
+Spam checking runs silently on every output. You get clean copy — no separate scan step needed.
 
 ---
 
@@ -208,8 +208,7 @@ Run `/spamguard` to scan any copy. The clean version is audited internally befor
 
 | Skill | Invoke | What it does |
 |---|---|---|
-| **Proximity** | `/proximity` | Writes and audits body copy, subject lines, and CTAs using the Proximity Method. Onboards from your website. Shows a full positioning snapshot before writing anything. Feedback loop updates your positioning doc every session. |
-| **SpamGuard** | `/spamguard` | Scans any copy for spam triggers. 300+ banned words, 7 phrase categories, 26 banned phrases, formatting check, internal audit loop. Clean version is re-scanned until zero violations. |
+| **Proximity** | `/proximity` | Writes and audits body copy, subject lines, and CTAs using the Proximity Method. Onboards from your website. Shows a full positioning snapshot before writing anything. Feedback loop updates your positioning doc every session. Spam audit runs silently on every output — 350+ banned words, 7 phrase categories, unified audit loop. |
 
 ---
 
@@ -218,10 +217,9 @@ Run `/spamguard` to scan any copy. The clean version is audited internally befor
 | File | Purpose |
 |---|---|
 | `proximity.md` | Proximity Method skill — installs to `~/.claude/skills/` |
-| `spamguard.md` | SpamGuard skill — installs to `~/.claude/skills/` |
 | `spamwords.md` | Master spam word and phrase reference — installed to your project directory |
 | `memory.md` | Your positioning doc — written on first run, enriched every session |
-| `install.sh` | Installer — drops both skills and both reference files in one command |
+| `install.sh` | Installer — drops the skill and reference files in one command |
 
 ---
 
